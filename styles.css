@@ -1,0 +1,296 @@
+* {
+  /* border: 1px solid black; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana,sans-serif;
+} 
+
+body {
+  background: white;  /* #d6d6d6 */
+}
+
+/* header */
+header {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 80px;
+  background-color: #e3e3e3;  /* #e3e3e3 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+} 
+
+.logoAndName {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 250px;
+}
+
+#logo {
+  /* border: 1px solid blue; */
+  margin-left: 20px;  /* header用flex後，再用margin-left固定logo */
+  width: 100px;
+}
+
+#webName {
+  /* border: 1px solid red; */
+  white-space: nowrap;
+  
+}
+
+.webNameF {
+  font-weight: 800;
+}
+
+nav {
+  /* border: 1px solid red; */
+  width: 50%;
+  max-width: 500px;
+  height: 100%;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* flex-wrap: wrap; */
+  padding-inline-start: 0;
+	margin-block: 0;
+	height: 100%;
+}
+
+nav > ul > li {
+  color: #1b1b32;
+  margin: 0 0.2rem;
+	padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #1b1b32;
+  color: #e3e3e3;
+  cursor: pointer;
+}
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+/* header */
+
+/* email Section */
+.emailSection {
+  /* border: 1px solid red; */
+  padding-top: 110px;
+  text-align: center;
+}
+
+.emailInput {
+  margin: 10px 0;
+  width: 300px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.submitBtn {
+  display: block;
+  margin: 0 auto;
+
+  font-size: 1rem;
+  padding: 2px 30px;
+  background-color: #2980B9;
+  color: white;
+  border-radius: 3px;
+  border-color: transparent;
+}
+/* email Section */
+
+/* Features Section */
+section:not(:first-child) {
+  /* border: 1px solid blue; */
+  padding-top: 90px;
+  position: relative;  /* 可以不用設置。設置是測試ifram所在section的position要再設置為static */
+  margin-top: -80px;
+  z-index: -1;
+
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  /* border: 2px solid green; */
+  margin: 0 auto;
+  border-spacing: 0 40px;
+}
+
+td {
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.material-icons.md-48 { 
+  font-size: 60px;
+  color: #2980B9;
+}
+
+.fa-truck, .fa-certificate {
+  /* border: 1px solid red; */
+  font-size: 50px;
+  color: #2980B9;
+}
+
+.featureStatement {
+  text-align: justify;
+  padding-left: 40px;
+}
+/* Features Section */
+
+/* Demonstration Section*/
+#s2{
+  /* border: 1px solid black; */
+  position: static;  /* 設置是測試ifram所在section的position要再設置為static */
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+  margin-top: 40px;
+}
+/* Demonstration Section*/
+
+/* Pricing Section */
+#s3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.productDiv {
+  border: 2px solid #1b1b32;
+  border-radius: 3px;
+  display: block;
+  margin: 40px 0;
+  width: 30%;  /* width少過300px就開始縮放 */
+  max-width: 300px;
+  background: white;
+}
+
+.productPic {
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 300px;  
+  object-fit: contain;  /* width和height都有value後，object-fit就充當比例調節 */
+  display: block;
+  margin: 10px auto;
+}
+
+h3 {
+  background: #e3e3e3;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+div > ul {
+  text-align: center;
+}
+
+div > ul > li {
+  display: block;
+}
+
+div > input {
+  display: block;
+  margin: 10px auto;
+
+  padding: 2px 15px;
+  background-color: #2980B9;
+  color: white;  
+  border-radius: 3px;
+  border-color: transparent;
+}
+/* Pricing Section */
+
+/* footer */
+footer {
+  margin-top: 10px;
+  padding: 20px 0;
+  text-align: right;
+  background-color: #e3e3e3;  /* #e3e3e3 */
+}
+
+footer > ul {
+  display: flex;
+  justify-content: right;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+footer > ul > li {
+  display: block;
+  padding: 0 10px;
+  /* font-weight: 600; */
+}
+
+footer > p {
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: normal;
+}
+/* footer */
+
+@media screen and (max-width: 860px) {
+  #s3 {
+    display: block;
+  }
+
+  .productDiv {
+    margin: 40px auto;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  header {
+    height: 150px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  nav {
+    height: 100px;
+  }
+
+  .emailSection {
+    padding-top: 180px;
+  }
+
+  section:not(:first-child) {
+    padding-top: 160px;
+    margin-top: -150px;
+  }
+
+  iframe {
+    width: 90%;
+  }
+}
